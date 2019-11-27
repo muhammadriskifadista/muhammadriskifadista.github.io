@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: poppins, sans-serif;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px green solid;
+}
+
+ul.topnav li {
+    float: right;
+}
+ul.topnav li:first-child{
+    margin-right: 30px;
+}
+
+ul.topnav li a {
+    display: inline-block;
+    padding: 16px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    line-height: 55px;
+}
+
+ul.topnav li a:hover {
+    color: green;
+}
+
+ul.topnav li.icon {
+    display: none;
+}
+
+@media screen and (max-width:786px) {
+
+    ul.topnav li:not(:first-child),
+    ul.topnav.responsive .menu,
+    ul.topnav.responsive .search,
+    ul.topnav.responsive li img {
+        display: none;
+    }
+
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ul.topnav.responsive li {
+        float: none;
+        display: inline;
+    }
+
+    ul.topnav li a {
+        display: block;
+        text-align: left;
+    }
+}
+.logo{
+    float: left;
+    font-size: 40px;
+    font-family: aardvark cafe;
+    color: green;
+    margin: 15px 50px;
+}
+@media(min-width:960px){.konten{
+    margin: 40px 190px 60;
+    column-count: 2;
+    text-align: justify;
+    text-indent: 30px;
+}
+}
+h3{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 70px;
+}
+hr{
+    width: 50%;
+}
+.parallax {
+  background-image: url('../gambar/par.jpg');
+  height: 50%; 
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bacaan{
+    margin: 40px 190px 120px;
+    column-count: 2;
+    text-align: justify;
+}
+.pupuk{
+     margin-left: 10%;
+    overflow: auto;
+}
+.pupuk .ppk{
+    float: left;
+    width: 25%;
+    margin: 30px 35px 50px;
+}
+.pupuk img{
+    width: 100%;
+    margin: 10% auto;
+}
+
+.kiri{
+    margin: 40px 190px;
+    column-count: 2;
+    text-align: justify;   
+}
+.kiri img{
+    width: 50%;
+    margin: 20px;
+    border-radius: 100%; 
+    margin-right: 50%;
+}
+.kiri h4{
+    text-align: center;
+    font-size: 2em;
+}
+.kanan{
+    margin: 40px 190px;
+    column-count: 2;
+    text-align: justify;   
+}
+.kanan img{
+    width: 50%;
+    border-radius: 100%; 
+    margin-left: 50%;
+}
+.kanan h4{
+    text-align: center;
+    font-size: 2em;
+}
+.sosial{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    height: 50;
+    position: relative
+    bottom: 0;
+}
+.sosial img{
+    width: 25px;
+    margin: 10px 15px;
+}
+.footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 100;
+    line-height: 100px;
+    position: relative;
+}
