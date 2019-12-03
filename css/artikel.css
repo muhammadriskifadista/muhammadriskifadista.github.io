@@ -32,7 +32,7 @@ ul.topnav li a {
     text-decoration: none;
     transition: 0.3s;
     font-size: 16px;
-    line-height: 55px;
+    line-height: 50px;
 }
 
 ul.topnav li a:hover {
@@ -45,7 +45,7 @@ ul.topnav li.icon {
 
 @media screen and (max-width:786px) {
 
-    ul.topnav li:not(:first-child),
+    ul.topnav li,
     ul.topnav.responsive .menu,
     ul.topnav.responsive .search,
     ul.topnav.responsive li img {
@@ -58,11 +58,11 @@ ul.topnav li.icon {
     }
 
     ul.topnav.responsive {
-        position: relative;
+        position: fixed;
     }
 
     ul.topnav.responsive li.icon {
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
     }
@@ -84,20 +84,49 @@ ul.topnav li.icon {
     color: green;
     margin: 15px 50px;
 }
+@media(max-width: 960px){.konten{
+    margin: 50px;
+    text-align: justify;
+}
+}
 @media(min-width:960px){.konten{
-    margin: 40px 190px 60;
+    margin: 40px 190px 120px;
     column-count: 2;
     text-align: justify;
     text-indent: 30px;
 }
 }
-h3{
+
+
+@media(min-width:960px){h3{
     font-size: 40px;
     text-align: center;
     margin-top: 70px;
 }
-hr{
+}
+@media(min-width:960px){hr{
     width: 50%;
+}
+}
+@media(max-width:960px){h3{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+}
+}
+@media(max-width:960px){hr{
+    width: 50%;
+}
+}
+
+
+
+.picture{
+    width: 100%;
+}
+.picture img{
+    width: 100%;
+    height: auto;
 }
 .parallax {
   background-image: url('../gambar/par.jpg');
@@ -105,60 +134,123 @@ hr{
   background-attachment: fixed;
   background-size: cover;
 }
-.bacaan{
-    margin: 40px 190px 120px;
-    column-count: 2;
-    text-align: justify;
-}
-.pupuk{
-     margin-left: 10%;
+
+
+
+@media(min-width:960px){.pupuk{
+    margin-left: 10%;
     overflow: auto;
 }
-.pupuk .ppk{
+}
+@media(min-width:960px){.pupuk .ppk{
     float: left;
     width: 25%;
     margin: 30px 35px 50px;
 }
-.pupuk img{
+}
+@media(min-width:960px){.pupuk img{
     width: 100%;
     margin: 10% auto;
 }
+}
+@media(max-width: 960px){.pupuk{
+    margin: 50px;
+    overflow: auto;
+    text-align: justify;
+}
+}
+@media(max-width: 960px){.pupuk img{
+    margin: 50px 50px 50px 100px;
+    width: 60%;
+    border-radius: 20%;
+}
+}
 
-.kiri{
+
+
+
+@media(min-width:960px){.kiri{
     margin: 40px 190px;
     column-count: 2;
     text-align: justify;   
 }
-.kiri img{
+}
+@media(min-width:960px){.kiri img{
     width: 50%;
     margin: 20px;
     border-radius: 100%; 
     margin-right: 50%;
 }
-.kiri h4{
-    text-align: center;
-    font-size: 2em;
 }
-.kanan{
+@media(min-width:960px){.kiri p{
+    text-align: justify;
+    font-size: 1em;
+}
+}
+@media(min-width:960px){.kanan{
     margin: 40px 190px;
     column-count: 2;
     text-align: justify;   
 }
-.kanan img{
+}
+@media(min-width:960px){.kanan img{
     width: 50%;
     border-radius: 100%; 
     margin-left: 50%;
 }
-.kanan h4{
-    text-align: center;
-    font-size: 2em;
 }
+@media(min-width:960px){.kanan p{
+    text-align: justify;
+    font-size: 1em;
+}
+}
+@media(max-width: 960px){.kiri{
+    margin:50px;
+    text-align: justify;
+}
+}
+@media(max-width: 960px){.kiri img{
+    width: 50%;
+    margin:50px 50px 50px 130px;
+    border-radius: 100%;
+}
+}
+@media(max-width: 960px){.kanan{
+    margin:50px;
+    text-align: justify;
+}
+}
+@media(max-width: 960px){.kanan img{
+    width: 50%;
+    margin:50px 50px 50px 130px;
+    border-radius: 100%;
+}
+}
+
+
+
+img.zoom {
+    overflow: auto;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+}
+.transisi {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+
 .sosial{
     text-align: center;
     background-color: grey;
     color: white;
     height: 50;
-    position: relative
+    position: relative;
     bottom: 0;
 }
 .sosial img{
