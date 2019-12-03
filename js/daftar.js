@@ -19,7 +19,7 @@ function validasi()
 	      alert("No Telepon tidak boleh kosong !");
 	      return false;
 	      };
-	    if (!nama.match(numbers))
+	    if (!tlp.match(numbers))
           {
           alert("Mana ada No Telepon pakai huruf???");
           return false;

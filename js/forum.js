@@ -4,7 +4,7 @@ function myFunction() {
 }
 
 $(document).ready(function() {
-     $(".jawab").click(function(){
+     $(".jawa").click(function(){
          $(".jawab1").toggle(500);
          $(".tampil").toggle(500);
          $(".jawab2").css("display","none");
