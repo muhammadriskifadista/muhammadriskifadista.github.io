@@ -2,85 +2,133 @@
     margin: 0px;
     padding: 0px;
 }
-    
-.logo{
-    float: left;
-    font-size: 40px;
-    font-family: aardvark cafe;
-    color: white;
-    margin: 15px 50px;
-}
 ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: auto;
-    background-color:  #13DE28;
-}
-ul.topnav li {
-	float: right;
-}
-ul.topnav li a {
-    line-height: 55px;
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 14px 17px;
-    text-decoration: none;
-    font-size: 17px;
-}
-ul.topnav li a:hover {
-	color: yellow;
-}
-ul.topnav li.icon {
-	display: none;
-}
-@media screen and (max-width:680px) {
-  ul.topnav li {
-      display: none;
-      
- }
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-    padding-right: 15px;
-  }
-    
-}
-@media screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 15px;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-    line-height: 20px;
-  }
-    ul .logo.responsive{display: none;}
-}
-    ul .topnav li a:hover:not(.active) {
-    color:#f1f522;
-}
-.active {
-    color:#000;
-    padding-right: 60px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px green solid;
 }
 
-    
-    
-    
+ul.topnav li {
+    float: right;
+}
+ul.topnav li:first-child{
+    margin-right: 30px;
+}
+
+ul.topnav li a {
+    display: inline-block;
+    padding: 16px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    line-height: 55px;
+}
+
+ul.topnav li a:hover {
+    color: green;
+}
+
+ul.topnav li.icon {
+    display: none;
+}
+
+@media screen and (max-width:786px) {
+
+    ul.topnav li,
+    ul.topnav.responsive .menu,
+    ul.topnav.responsive .search,
+    ul.topnav.responsive li img {
+        display: none;
+    }
+
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ul.topnav.responsive li {
+        float: none;
+        display: inline;
+    }
+
+    ul.topnav li a {
+        display: block;
+        text-align: left;
+    }
+}
+.logo{
+    float: left;
+    font-size: 40px;
+    font-family: aardvark cafe;
+    color: green;
+    margin: 15px 50px;
+}
+#popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+}
+
+.window {
+    width: 30%;
+    height: 25%;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    margin: 15% auto;
+}
+.window h2 {
+    margin: 1%;
+}
+/* Button Close */
+.close-button {
+    width: 5%;
+    height: 15%;
+    line-height: 25px;
+    background: #000;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: -10px;
+    right: -10px;   
+}
+
+/* Memunculkan Jendela Pop Up*/
+#popup:target {
+    visibility: visible;
+}
 .center {
   width: 350px;
   height: auto;
-  margin-left: 10%;
-  margin-top: 100px;
+  margin: 10% 10%;
   background-color: #f0f0f0;
   box-shadow: 2px 2px 16px 0px #757575;
   padding: 40px;
@@ -109,16 +157,58 @@ ul.topnav li.icon {
   padding: 12px;
   margin: 5px 3.5px;
   background-color: #004d40;
-  border: none;
-  
+  border: none;  
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
 }
 
 .its:hover , .its:focus {
   opacity: 0.7;
   cursor: pointer;
 }
-img{
-        float: left;
-        width: 320px;
-        margin: 10% 15%;
+img.zoom {
+    overflow: auto;
+    width: 320px;
+    float: left;
+    margin: 15% 5%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+}
+.transisi {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+
+.sosial{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    height: 50;
+    position: relative;
+    overflow: auto;
+    width: 100%
+}
+#login{
+    overflow: auto;
+}
+.sosial img{
+    width: 25px;
+    margin: 10px 15px;
+}
+.footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 100;
+    overflow: auto;
+    line-height: 100px;
+    width: 100%;
 }
