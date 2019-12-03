@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daftar</title>
+<title>Daftar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/daftar.css">
+    <script src="../js/daftar.js"></script>
 </head>
 <body>
 
 <ul class="topnav">
-  <li><a class="active" href="#home" style="padding-right: 60px; color: black">Sign In</a></li>
-  <li><a href="../html.artikel.html">Artikel</a></li>
+  <li><a class="active" href="../index.html" style="padding-right: 60px; color: black">Sign In</a></li>
+  <li><a href="../html/artikel.html">Artikel</a></li>
+  <li><a href="#popup" id="Tentang">Tentang</a></li>
     <div class="logo">Agritawan</div>
     <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">☰</a>
   </li>
 </ul>
+<div id="popup" class="popup">
+            <div class="window">
+                <a href="#" class="close-button" title="Close">X</a>
+                <h2>Profil</h2>
+                Bayu Setiawan 182410103023<br>
+                Muhammad Riski Fadista 182410103032
+            </div>
+        </div>
     <div id="login">
       <div class="center">
           <h2>Silahkan Masuk</h2>
@@ -28,9 +38,44 @@
             <center><input class="its" type="submit" name="login" value="Daftar"></center>
           </form>.
         </div>
+        <img src="../gambar/agriculture.png" class="zoom">
     </div>
     
-    <img src="../gambar/agriculture.png">
- <script src="../js/daftar.js"></script>
+    
+    
+<div class="sosial">
+    <a href="https://www.instagram.com/"><img src="../gambar/instagram.png"></a>
+    <a href="https://www.facebook.com/"><img src="../gambar/facebook.png"></a>
+    <a href="https://www.twitter.com/"><img src="../gambar/twitter.png"></a>
+    <a href="https://www.github.com/"><img src="../gambar/github.png"></a>
+    </div>
+<div class="footer">© 2019. Hak cipta dilindungi Tuhan YME.</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.zoom').hover(function() {
+        $(this).addClass('transisi');
+    }, function() {
+        $(this).removeClass('transisi');
+    });
+});  
+</script>
+<script>
+
+    window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+</script>
+<script>
+  $(document).ready(function(){
+    $('.its').hover(function() {
+        $(this).addClass('transisi');
+    }, function() {
+        $(this).removeClass('transisi');
+    });
+});  
+</script>
 </body>
 </html>
